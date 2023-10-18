@@ -1,3 +1,4 @@
+import employeeController from "../Controller/employeeController.js";
 import homeController from "../Controller/homeController.js";
 import navbarController from "../Controller/navbarController.js";
 const root = document.getElementById("root");
@@ -13,15 +14,19 @@ export default function Routes() {
   }
 }
 
+//ກຳນົດ Router
 const setRoutes = async () => {
   await navbarController(root);
   switch (page) {
     case "home":
       homeController(root);
       break;
+    case "employee":
+      employeeController(root);
+      break;
 
     default:
-        root.innerHTML = "Page not found";
+      root.innerHTML = "Page not found";
       break;
   }
 };
