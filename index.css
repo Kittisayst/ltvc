@@ -10,3 +10,7 @@
 .webcardbg:hover {
   background: #2082cc;
 }
+
+.dataTables_length{
+  margin: 5px 0px;
+}

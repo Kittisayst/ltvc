@@ -1,35 +1,31 @@
 <div class="container">
-    <h1 class="text-center mt-4">ພະນັກງານ ວຕວຫຼບ</h1>
-    <div class="d-flex my-3 justify-content-center gap-2">
-        <div>
-            <label for="" class="form-label">ພະແນກ-ພາກວິຊາ</label>
-            <select class="form-select" id="cbDepartment">
-
-            </select>
-        </div>
+  <h1 class="text-center mt-4">ພະນັກງານ ວຕວຫຼບ</h1>
+  <div class="d-flex my-3 justify-content-center gap-2">
+    <div>
+      <label for="" class="form-label">ພະແນກ-ພາກວິຊາ</label>
+      <select class="form-select" id="cbDepartment"></select>
     </div>
-    <table class="table table-bordered table-hover" id="tbEmployee">
-        <thead class="table-light">
-            <tr>
-                <th scope="col">#</th>
-                <th scope="col">ຊຶ່ ແລະ ນາມສະກຸນ</th>
-                <th scope="col">ເບີໂທ</th>
-                <th scope="col">email</th>
-            </tr>
-        </thead>
-        <tbody>
-            <tr>
-                <th scope="row">1</th>
-                <td>Mark</td>
-                <td>Otto</td>
-                <td>@mdo</td>
-            </tr>
-            <tr>
-                <th scope="row">2</th>
-                <td>Jacob</td>
-                <td>Thornton</td>
-                <td>@fat</td>
-            </tr>
-        </tbody>
-    </table>
+  </div>
+  <table class="table table-bordered table-hover" id="tbEmployee">
+    <thead class="table-light">
+      <tr>
+        <th scope="col" class="text-center">#</th>
+        <th scope="col" class="text-center">ຊຶ່ ແລະ ນາມສະກຸນ</th>
+        <th scope="col" class="text-center">ພະແນກ-ພາກວິຊາ</th>
+        <th scope="col" class="text-center">ເບີໂທ</th>
+      </tr>
+    </thead>
+    <tbody id="tableData">
+      <tr>
+        <td colspan="4" class="text-center">
+          <span
+            class="spinner-grow spinner-grow-sm"
+            role="status"
+            aria-hidden="true"
+          ></span>
+          Loading...
+        </td>
+      </tr>
+    </tbody>
+  </table>
 </div>
