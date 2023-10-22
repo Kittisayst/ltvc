@@ -1,6 +1,7 @@
 import employeeController from "../Controller/employeeController.js";
 import homeController from "../Controller/homeController.js";
 import navbarController from "../Controller/navbarController.js";
+import respectController from "../Controller/respectController.js";
 const root = document.getElementById("root");
 const parm = window.location.search;
 const url = new URLSearchParams(parm);
@@ -24,7 +25,9 @@ const setRoutes = async () => {
     case "employee":
       employeeController(root);
       break;
-
+    case "respect":
+      respectController(root);
+      break;
     default:
       root.innerHTML = "Page not found";
       break;
