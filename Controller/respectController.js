@@ -31,9 +31,6 @@ const showDepartment = async () => {
         str += `<option value="${data.department}">${data.department}</option>`;
     });
     cbDepartment.innerHTML = str;
-    // cbDepartment.addEventListener("change", (e) => {
-    //     showDataTable(e.target.value);
-    // });
 };
 
 const handelSubmit = () => {

@@ -10,7 +10,7 @@ export default async function homeController(root) {
 
 const showWebsite = async () => {
   const content = document.getElementById("website");
-  const res = await WebsiteModel();
+  const res = await loadWebsite();
   let str = "";
   res.forEach((data) => {
     str += `
@@ -22,3 +22,14 @@ const showWebsite = async () => {
   });
   content.innerHTML = str;
 };
+
+const loadWebsite = async () => {
+  const website = sessionStorage.getItem("website");
+  if (website) {
+    return JSON.parse(sessionStorage.getItem("website"));
+  } else {
+    const res = await WebsiteModel();
+    sessionStorage.setItem("website", JSON.stringify(res));
+    return res;
+  }
+}
