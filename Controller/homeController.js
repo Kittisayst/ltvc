@@ -26,7 +26,7 @@ const showWebsite = async () => {
 const loadWebsite = async () => {
   setTimeout(() => {
     sessionStorage.removeItem("website");
-  }, 30 * 60 * 1000);
+  }, 1000);
   const website = sessionStorage.getItem("website");
   if (website) {
     return JSON.parse(sessionStorage.getItem("website"));

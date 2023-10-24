@@ -3,6 +3,7 @@ import homeController from "../Controller/homeController.js";
 import navbarController from "../Controller/navbarController.js";
 import relationshipController from "../Controller/relationshipController.js";
 import respectController from "../Controller/respectController.js";
+import workweekController from "../Controller/workweekController.js";
 const root = document.getElementById("root");
 const parm = window.location.search;
 const url = new URLSearchParams(parm);
@@ -31,6 +32,9 @@ const setRoutes = async () => {
       break;
     case "relationship":
       relationshipController(root);
+      break;
+    case "workweek":
+      workweekController(root);
       break;
     default:
       root.innerHTML = "Page not found";
