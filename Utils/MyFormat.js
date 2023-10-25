@@ -23,4 +23,22 @@ const formatSplitDate = (date) => {
     return outputString;
 }
 
-export { formatDate, formatDateData, formatSplitDate };
+const getDayNow = () => {
+    const date = new Date();
+    var day = date.getDate();
+    return day;
+}
+
+const getMonthNow = () => {
+    const date = new Date();
+    var month = date.getMonth() + 1;
+    return month;
+}
+
+const getYearNow = () => {
+    const date = new Date();
+    var year = date.getFullYear();
+    return year;
+}
+
+export { formatDate, formatDateData, formatSplitDate, getDayNow, getMonthNow, getYearNow };

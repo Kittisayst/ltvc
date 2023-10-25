@@ -1,0 +1,41 @@
+<div class="container">
+    <h1 class="text-center my-3">ການປະຈຳການ</h1>
+    <form id="frmsearch" class="d-flex justify-content-sm-start justify-content-md-center my-3 gap-2 flex-wrap">
+        <div class="col-12 col-xl-4">
+            <label for="cbDepartment" class="form-label">ພະແນກ-ພາກວິຊາ</label>
+            <select class="form-select" id="cbDepartment" required>
+
+            </select>
+        </div>
+        <div class="col-9 col-lg-1">
+            <label for="year" class="form-label">ສົກປີ</label>
+            <input type="number" class="form-control" id="year" name="year" min="2023" max="2100">
+        </div>
+        <div class="col-9 col-lg-1">
+            <label for="month" class="form-label">ເດືອນ</label>
+            <input type="number" class="form-control" id="month" name="month" min="1" max="12">
+        </div>
+        <div class="col-2 d-flex">
+            <button type="submit" class="btn btn-primary mt-auto">ຄົ້ນຫາ</button>
+        </div>
+    </form>
+    <table class="table table-bordered table-hover table-responsive" id="tbWorkin">
+        <thead class="table-light">
+            <tr>
+                <th scope="col" class="text-center">#</th>
+                <th scope="col" class="text-center">ຊຶ່ ແລະ ນາມສະກຸນ</th>
+                <th scope="col" class="text-center">ພະແນກ-ພາກວິຊາ</th>
+                <th scope="col" class="text-center">ວັນທີ</th>
+                <th scope="col" class="text-center">ສະຖານະ</th>
+            </tr>
+        </thead>
+        <tbody id="tableData">
+            <tr>
+                <td colspan="5" class="text-center">
+                    <span class="spinner-grow spinner-grow-sm" role="status" aria-hidden="true"></span>
+                    Loading...
+                </td>
+            </tr>
+        </tbody>
+    </table>
+</div>

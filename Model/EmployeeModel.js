@@ -5,15 +5,17 @@ export default async function EmployeeModel() {
     "1dUH5joLJS7z7RYG_slIQrvGedwSVNVnpPuaXdRFplJ0",
     "tbTeacher"
   );
-  const data = res.map(([a, b, c, d, e, f, g]) => {
+  const data = res.map(([a, b, c, d, e, f, g, h, i]) => {
     return {
       id: a,
       name: b,
-      department: c,
-      phone: d,
-      email: e,
-      password: f,
-      status: g,
+      position: c,
+      department: d,
+      phone: e,
+      email: f,
+      password: g,
+      rule: h,
+      status: i,
     };
   });
   return data;

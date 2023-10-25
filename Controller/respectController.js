@@ -84,7 +84,7 @@ const loadRespect = async (dpmName) => {
         if (res) {
             cell.innerHTML = RespectStatus(res.status);
         } else {
-            cell.innerHTML = `<span class="badge rounded-pill bg-secondary w-50">ຍັງບໍ່ບັນທຶກ</span>`;
+            cell.innerHTML = `<span class="badge rounded-pill bg-secondary w-100">${formatDate(textDate.value)} ບໍ່ມີບັນທຶກ</span>`;
         }
     }
 }
@@ -96,7 +96,9 @@ const RespectStatus = (status) => {
         return `<span class="badge rounded-pill bg-warning text-dark w-50">ຄອບ</span>`;
     } else if (status == 2) {
         return `<span class="badge rounded-pill bg-success w-50">ມາ</span>`;
-    } else {
+    } else if(status == 3){
+        return `<span class="badge rounded-pill bg-info w-50">ມາຊ້າ</span>`;
+    }else {
         return `<span class="badge rounded-pill bg-secondary w-50">ຜິດພາດ</span>`;
     }
 }
