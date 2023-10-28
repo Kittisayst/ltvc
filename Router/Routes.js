@@ -1,5 +1,6 @@
 import employeeController from "../Controller/employeeController.js";
 import homeController from "../Controller/homeController.js";
+import loginController from "../Controller/loginController.js";
 import navbarController from "../Controller/navbarController.js";
 import relationshipController from "../Controller/relationshipController.js";
 import respectController from "../Controller/respectController.js";
@@ -22,6 +23,9 @@ export default function Routes() {
 const setRoutes = async () => {
   await navbarController(root);
   switch (page) {
+    case "login":
+      loginController(root);
+      break;
     case "home":
       homeController(root);
       break;
